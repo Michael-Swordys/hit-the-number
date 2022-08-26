@@ -22,12 +22,15 @@ header{
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
     background-color: var(--white);
 }
+
 header a h1{
     color: var(--blue);
     font-size: 2.8em;
     font-weight: 300;
 }
-/* Container */
+
+/* Container =================*/
+
 .container
 {
     width: 100%;
@@ -39,6 +42,7 @@ header a h1{
     background: linear-gradient(to right, #ddd, #eee, #ddd);
     
 }
+
 .container form
 {
     background: var(--blueLite);
@@ -49,6 +53,7 @@ header a h1{
     margin-top: 5%;
     border-radius: 0.5rem;
 }
+
 .container form input
 {
     border: 0;
@@ -66,9 +71,10 @@ header a h1{
 {
     box-shadow: inset 1px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
+
 input:focus::placeholder {
     color: transparent;
-  }
+}
 
 .container form button
 {
@@ -103,6 +109,7 @@ input:focus::placeholder {
     color: var(--blue);
     box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
+
 .container .result-box h2{
     font-weight: 330;
     font-size: 1.5rem;
@@ -128,7 +135,6 @@ input:focus::placeholder {
     border-radius: 3px;
     box-shadow:2px 2px 2px 3px rgba(92, 66, 241, 0.1);
     transition: 0.5s ease-in-out;
-
     display: none;
 }
 
@@ -138,9 +144,12 @@ input:focus::placeholder {
     background-color: var(--blue);
 }
 
+/* Footer ==================== */
 footer
 {
     padding: 1.2rem;
+    font-weight: 1rem;
+    font-size: 1em;
     background-color: var(--white);
     text-align: center;
     color: var(--blue);
