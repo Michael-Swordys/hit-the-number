@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GuessNumber</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/index.js" defer></script>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="#"><h1>GuessNumber</h1></a>
+      <a href="#"><h1>GuessNumber</h1></a>
     </header>
 
     <main class="container">
-        <form id="form">
-        <label for="click">Digite um numero de 0 a 10:</label>
-        <input type="number" max="10" min="0" id="click" placeholder="0">
+      <form id="form">
+        <label for="click">Digite um numero de 0 a 100:</label>
+        <input
+          type="number"
+          max="100"
+          min="0"
+          id="click"
+          placeholder="Digite o número"
+        />
         <button type="submit">Jogar</button>
-        </form>
+      </form>
 
-        <section class="result-box" id="result">
-            <h2 id="status"> Advinhe o número sorteado!</h2>
-            <span id="attempt">Tentativas: 0</span>
-        </section>
+      <section class="result-box" id="result">
+        <h2 id="status">Advinhe o número sorteado!</h2>
+        <span id="attempt">Tentativas: 0</span>
+      </section>
 
-        <button id="btnRestart" onclick="restart()">Jogar novamente</button>
+      <button id="btnRestart" onclick="restart()">Jogar novamente</button>
+      <button id="buttonDica" onclick="dica()">Dica</button>
     </main>
 
     <footer>
-        <p>GuessNumber 2021. &copy;</p>
+      <p>GuessNumber 2021. &copy;</p>
     </footer>
-
-</body>
+  </body>
 </html>
