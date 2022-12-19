@@ -21,10 +21,10 @@
 
     <main class="container">
       <form id="form">
-        <label for="click">Digite um numero de 0 a 100:</label>
+        <label for="click">Digite um numero de 0 a 20:</label>
         <input
           type="number"
-          max="100"
+          max="20"
           min="0"
           id="click"
           placeholder="Digite o número"
@@ -38,7 +38,7 @@
       </section>
 
       <button id="btnRestart" onclick="restart()">Jogar novamente</button>
-      <button id="buttonDica" onclick="dica()">Dica</button>
+      <button id="buttonDica" onclick="dica(), this.disabled = true;">Dica</button>
     </main>
 
     <footer>

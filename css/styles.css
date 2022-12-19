@@ -127,6 +127,7 @@ input:focus::placeholder {
   transition: 0.7s;
 }
 
+
 .container .result-box span {
   font-size: 1.3rem;
   font-weight: 300;

@@ -14,7 +14,6 @@ const Guess = {
 };
 
 let numberDrawn = Guess.numberDrawn();
-
 function updateAttempt(attempt, value) {
   attempt.innerHTML = "Tentativa: " + value;
 }
@@ -42,22 +41,49 @@ function handleSubmit(e) {
     result.style.color = "#fff";
     status.style.color = "#fff";
     clear();
-  } else {
-    status.innerHTML = "Número errado!";
-    status.style.color = "#de4251";
+  }
+  else if (Guess.attempts < 2) {
+    status.innerHTML = "Você errou 1x, resta somente 2 chance.";
+    status.style.color = "#ff5830";
+      setTimeout(() => {
+        document.getElementById("buttonDica").style.display = "block"
+      }, "2500")
     clear();
+  }
+   else if (Guess.attempts == 2) {
+    status.innerHTML = "Você errou 2x, resta somente uma chance.";
+    status.style.color = "#ff5830";
+      setTimeout(() => {
+        document.getElementById("buttonDica").style.display = "block"
+      }, "2500")
+    clear();
+  }
+  else if(Guess.attempts > 2)
+  {
+    clear();
+    status.innerHTML = "Tente de novo, a pagina está se recarregando..."
+    status.color = "#ff0000"
+    setTimeout(() => {
+      document.location.reload(true)
+    }, "4000")
   }
 }
 
 function dica() {
   var textDica = document.getElementById("result");
-  var dica = numberDrawn > 10 ? "Maior" : "Menor";
-  var text = document.createTextNode(`O Número é ${dica} que ${10}.`);
-  console.log(numberDrawn);
+  var campo = document.createElement("div")
+  campo.setAttribute("id", "my-id")
+  campo.style.marginTop = "6px";
+  campo.style.textAlign = "center";
+  campo.style.fontFamily = "Ubuntu", "sans-serif";
+  campo.style.fontWeight = "400";
+  textDica.appendChild(campo)
   var tentativas = document.getElementById("attempt");
-  tentativas.style.display = "none";
-  textDica.appendChild(text);
-  clear();
+  var quebralinha = document.createElement("br");
+  tentativas.appendChild(quebralinha);
+  var comparacao = numberDrawn > 10 ? "Maior" : "Menor";
+  var text = document.createTextNode(`O Número é ${comparacao} que ${10}.`);
+  campo.appendChild(text);
 }
 
 function playAgain() {
